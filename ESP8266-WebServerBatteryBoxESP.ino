@@ -70,7 +70,9 @@ void setup() {
 
 void loop() {
   knightRider();
-  twinkleRGBLEDS();
+  if (!(count %10)) {
+   twinkleRGBLEDS();
+  }
   count ++;
   // Check if a client has connected
   WiFiClient client = server.available();
